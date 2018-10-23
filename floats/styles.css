@@ -1,0 +1,91 @@
+/*
+We now have all the tools necessary to align block-level elements:
+floats for left/right alignment and auto-margins for center alignment.
+Remember that this only applies to block boxes. Inline boxes are aligned
+with the text-align property, as discussed in the previous chapter.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.container {
+  overflow: hidden;
+  background-color: #EAEDF0;
+}
+
+.menu {
+  height: 100px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.sidebar {
+  float: left; /* align it to the left side of the page */
+  width: 200px;                 /* Add this */
+  height: 300px;
+  background-color: #F09A9D;    /* Red */
+}
+
+.content {
+  padding: 20px;
+  float: left;
+  width: 650px;
+  height: 500px;
+  background-color: #F5CF8E;    /* Yellow */
+}
+
+.article-image {
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.footer {
+  overflow: hidden;
+  background-color: #D6E9FE;    /* Light blue */
+}
+
+/*
+Percentages in CSS are relative to the width of the parent element.
+The result is three columns that automatically resize to one-third of the browser window.
+Resize the browser window, and you’ll see our columns grow and shrink accordingly.
+*/
+
+.foot-item {
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 160px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+
+.avatar {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #D6E9FE;
+}
+
+.username {
+  margin-top: 30px;
+}
+
+.comment {
+  margin: 10px;
+  overflow: hidden;  /* This is important */
+}
